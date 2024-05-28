@@ -16,6 +16,11 @@ class ApiRoute implements Route {
       return Response.html('Hello World');
     }).middleware([HomeMiddleware()]);
 
+    Router.get(
+      "/super-user",
+      () => Response.json({'message': 'Hi super user'}),
+    );
+
     // Return error code 400
     Router.get('wrong-request',
             () => Response.json({'message': 'Hi wrong request'}))
