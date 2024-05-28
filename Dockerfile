@@ -5,7 +5,7 @@ FROM dart:stable AS build
 WORKDIR /app
 
 # Copy from secret files
-COPY /etc/secrets/.env ./
+COPY ~/.env ./
 
 # Resolve app dependencies.
 COPY pubspec.* ./
