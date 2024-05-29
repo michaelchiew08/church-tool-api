@@ -4,7 +4,7 @@ class CreateUserTable extends Migration {
   @override
   Future<void> up() async {
     super.up();
-    await createTable('users', () {
+    await createTableNotExists('users', () {
       id();
       string('name');
       string('email');
@@ -18,7 +18,6 @@ class CreateUserTable extends Migration {
   @override
   Future<void> down() {
     super.down();
-    // TODO: implement down
     throw UnimplementedError();
   }
 }
