@@ -15,10 +15,4 @@ class CreateUserTable extends Migration {
       timeStamp('updated_at');
     });
   }
-
-  @override
-  Future<void> down() {
-    super.down();
-    throw UnimplementedError();
-  }
 }
